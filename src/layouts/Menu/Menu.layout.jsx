@@ -4,16 +4,18 @@ const Menu = () => {
 
   return (
     <>
-      <header className="w-full h-28">
-        <div>
-          <Link>
-            <h1>Matcha</h1>
+      <header className="w-full h-14 bg-red-700">
+        <div className="h-full p-2 flex justify-between items-center">
+          <Link className="font-bold">
+            <h1 className="">Matcha</h1>
           </Link>
           <nav>
-            <ul>
-              <li><Link href="#">Home</Link></li>
-              <li><Link href="#">About</Link></li>
-              <li><Link href="#">Contact</Link></li>
+            <ul className="flex gap-4">
+              <li>
+                <Link href="#">
+                </Link>
+              </li>
+              <li><Link href="#">Create</Link></li>
             </ul>
           </nav>
         </div>
