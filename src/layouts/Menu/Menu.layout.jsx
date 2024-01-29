@@ -4,7 +4,7 @@ const Menu = () => {
 
   return (
     <>
-      <header>
+      <header className="w-full h-28">
         <div>
           <Link>
             <h1>Matcha</h1>

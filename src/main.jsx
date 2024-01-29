@@ -6,11 +6,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
+import Menu from './layouts/Menu/Menu.layout'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <h1>Menu</h1>
+    element: <Menu />
   }
 ])
 
