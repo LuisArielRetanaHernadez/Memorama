@@ -8,7 +8,7 @@ const Room = ({id, title}) => {
         <h4 className="">Historia</h4>
       </div>
       <div>
-        <span>Jugadores</span>
+        <span className="mr-3">Jugadores</span>
         <span>4</span>
       </div>
 
