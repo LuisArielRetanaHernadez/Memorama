@@ -7,7 +7,7 @@ const Room = ({id, title}) => {
         <h3 className="font-bold text-xl">{title}</h3>
         <h4 className="">Historia</h4>
       </div>
-      <div>
+      <div className=" mt-10">
         <span className="mr-3">Jugadores</span>
         <span>4</span>
       </div>
