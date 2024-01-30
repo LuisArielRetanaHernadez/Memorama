@@ -13,6 +13,7 @@ const Room = ({id, title}) => {
       </div>
 
       <span className=" font-semibold absolute top-3">ID: {id}</span>
+      <span className="font-semibold text-sm absolute top-3 right-3" >Privadad</span>
     </div>
   )
 }
