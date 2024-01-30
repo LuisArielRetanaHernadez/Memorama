@@ -12,7 +12,7 @@ const Home = () => {
       <div>
         {/*Search room gamer*/}
       </div>
-      <div>
+      <div className="grid grid-cols-rooms grid-rows-rooms auto-rows-rooms gap-3 ">
         {salas.map((sala) => (
           <Room
             key={sala.id} 

@@ -2,7 +2,7 @@
 const Room = ({id, title}) => {
 
   return (
-    <div>
+    <div className=" bg-blue-800">
       <div>
         <h3>{title}</h3>
         <h4>Historia</h4>
