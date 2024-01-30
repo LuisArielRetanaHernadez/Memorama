@@ -2,10 +2,10 @@
 const Room = ({id, title}) => {
 
   return (
-    <div className=" bg-blue-800">
-      <div>
-        <h3>{title}</h3>
-        <h4>Historia</h4>
+    <div className="p-2 rounded-md bg-indigo-800">
+      <div className="text-center">
+        <h3 className="font-bold text-xl">{title}</h3>
+        <h4 className="">Historia</h4>
       </div>
       <div>
         <span>Jugadores</span>
