@@ -2,6 +2,9 @@ import { useState } from "react"
 
 // api
 import { rooms } from "../../utils/api"
+
+// components
+import Search from "../../components/Search/Search"
 import Room from "../../components/Room/Room"
 
 const Home = () => {
@@ -10,7 +13,7 @@ const Home = () => {
   return (
     <section className="mt-2">
       <div>
-        {/*Search room gamer*/}
+        <Search setSalas={setSalas} />
       </div>
       <div className="grid grid-cols-rooms grid-rows-rooms auto-rows-rooms gap-3 ">
         {salas.map((sala) => (
