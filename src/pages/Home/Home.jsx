@@ -25,7 +25,9 @@ const Home = () => {
           />
         ))}
       </div>
-      <Pagination />
+      <div className="flex justify-center">
+        <Pagination />
+      </div>
     </section>
   )
 }
