@@ -6,6 +6,7 @@ import { rooms } from "../../utils/api"
 // components
 import Search from "../../components/Search/Search"
 import Room from "../../components/Room/Room"
+import Pagination from "../../components/Pagination/Pagination"
 
 const Home = () => {
   const [salas, setSalas] = useState(rooms)
@@ -24,6 +25,7 @@ const Home = () => {
           />
         ))}
       </div>
+      <Pagination />
     </section>
   )
 }
