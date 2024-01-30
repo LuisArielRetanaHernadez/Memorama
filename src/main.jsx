@@ -7,11 +7,19 @@ import {
   RouterProvider,
 } from "react-router-dom"
 import Menu from './layouts/Menu/Menu.layout'
+import Home from './pages/Home/Home'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Menu />
+    element: <Menu />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+        index: true
+      }
+    ]
   }
 ])
 
