@@ -8,7 +8,7 @@ const Home = () => {
   const [salas, setSalas] = useState(rooms)
 
   return (
-    <section>
+    <section className="mt-2">
       <div>
         {/*Search room gamer*/}
       </div>
