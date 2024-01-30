@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        'rooms': 'repeat(auto-fit, minmax(250px, 1fr))',
+      },
+      gridTemplateRows: {
+        'rooms': 'repeat(auto-fit, minmax(300px, 1fr))',
+      },
+      gridAutoRows: {
+        'rooms': 'minmax(300px, 1fr)',
+      }
+    },
   },
   plugins: [],
 }
