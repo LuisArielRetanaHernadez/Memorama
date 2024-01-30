@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <section className="mt-2">
-      <div className="w-2/5 m-auto flex justify-center">
+      <div className="w-2/5 m-auto mb-5 flex justify-center">
         <Search setSalas={setSalas} />
       </div>
       <div className="grid grid-cols-rooms grid-rows-rooms auto-rows-rooms gap-3 ">
