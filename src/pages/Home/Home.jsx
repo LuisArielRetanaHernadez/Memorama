@@ -26,7 +26,7 @@ const Home = () => {
         ))}
       </div>
       <div className="flex justify-center">
-        <Pagination total={salas.length} numbersPages={4} />
+        <Pagination total={salas.length} numbersPages={4} totalSource={6} />
       </div>
     </section>
   )

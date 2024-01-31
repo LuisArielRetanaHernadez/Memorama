@@ -1,24 +1,23 @@
 import { useEffect, useState } from "react"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useFetcher, useLocation } from "react-router-dom"
 
-const Pagination = ({total, numbersPages, limitIndex}) => {
-  const [pages, setPages] = useState([])
-  const [index, setIndex] = useState(0)
+const Pagination = ({total, numbersPages, totalSource}) => {
+  const [pages, setPages] = useState([1,2,3,4])
+  const [currentPage, setCurrentPage] = useState(0)
 
   let location = useLocation()
 
   useEffect(() => {
     const numberPage = parseInt(location.search.split('=')[1])
-    if(numberPage) setIndex(numberPage)
-  },[location])
-  
-  useEffect(() => {
-    const pages = []
-    for(let i = 1; i <= (numbersPages - 1); i++) {
-      pages.push(i + 1)
+    const totalPages = Math.ceil(total / totalSource )
+    console.log('total source ', totalPages)
+    if (numberPage > totalPages || numberPage < totalPages) {
+      setCurrentPage(1)
+    } else {
+      setCurrentPage(numberPage)
     }
-    setPages(pages)
-  },[numbersPages])
+
+  },[location])
 
   // cambiar el index de los links conforme al numero de la paginas
 
