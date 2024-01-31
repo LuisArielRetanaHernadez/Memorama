@@ -3,7 +3,7 @@ import { Link, useFetcher, useLocation } from "react-router-dom"
 
 const Pagination = ({total, numbersPages, totalSource, updateIndex}) => {
   const [pages, setPages] = useState([1,2,3,4])
-  const [currentPage, setCurrentPage] = useState(0)
+  const [currentPage, setCurrentPage] = useState(1)
 
   let location = useLocation()
   const totalPages = Math.ceil(total / totalSource )
