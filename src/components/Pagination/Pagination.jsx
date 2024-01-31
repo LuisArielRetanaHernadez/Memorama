@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 
-const Pagination = ({total, amountPages, limitIndex}) => {
+const Pagination = ({total, numbersPages, limitIndex}) => {
   const [pages, setPages] = useState([])
   const [index, setIndex] = useState(0)
 
@@ -14,7 +14,7 @@ const Pagination = ({total, amountPages, limitIndex}) => {
   
   useEffect(() => {
     const pages = []
-    for(let i = 1; i <= (total - 1); i++) {
+    for(let i = 1; i <= (numbersPages - 1); i++) {
       pages.push(i + 1)
     }
     setPages(pages)
