@@ -18,7 +18,7 @@ const Pagination = ({total, numbersPages, limitIndex}) => {
       pages.push(i + 1)
     }
     setPages(pages)
-  },[])
+  },[numbersPages])
 
   // cambiar el index de los links conforme al numero de la paginas
 
