@@ -26,7 +26,7 @@ const Home = () => {
         ))}
       </div>
       <div className="flex justify-center">
-        <Pagination />
+        <Pagination total={salas.length} numbersPages={4} />
       </div>
     </section>
   )
