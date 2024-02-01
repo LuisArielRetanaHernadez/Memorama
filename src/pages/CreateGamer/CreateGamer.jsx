@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const CreateGamer = () => {
   const [isPrivate, setIsPrivate] = useState(true)
+  const [isOnline, setIsOnline] = useState(true)
 
   return (
     <div className="bg-blue-700 grid grid-cols-create-gamer grid-rows-create-gamer justify-center">
@@ -24,16 +25,19 @@ const CreateGamer = () => {
             <input type="checkbox" value={false}/>
           </label>
         </div>
-        <div>
-          <label>
-            Privadad
-            <input type="checkbox" value={true}/>
-          </label>
-          <label>
-            Publica
-            <input type="checkbox" value={false}/>
-          </label>
-        </div>
+        {
+          isOnline && <div>
+            <label>
+              Privadad
+              <input type="checkbox" value={true}/>
+            </label>
+            <label>
+              Publica
+              <input type="checkbox" value={false}/>
+            </label>
+          </div>
+        }
+
         {
           isPrivate && <div>
           <input className="w-full font-semibold text-center border-b border-b-slate-950 p-1 outline-none bg-slate-300" placeholder="Contraseña"/>
