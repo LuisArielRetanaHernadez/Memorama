@@ -24,6 +24,13 @@ const CreateGamer = () => {
             <input type="checkbox" value={false}/>
           </label>
         </div>
+        {
+          isPrivate && <div>
+          <input className="w-full font-semibold text-center border-b border-b-slate-950 p-1 outline-none bg-slate-300" placeholder="Contraseña"/>
+          <spna>V</spna>
+        </div>
+        }
+        
         <div>
           <button>Crear</button>
         </div>
