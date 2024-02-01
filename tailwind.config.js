@@ -12,10 +12,13 @@ export default {
       },
       gridTemplateRows: {
         'rooms': 'repeat(auto-fit, minmax(300px, 1fr))',
-        'create-gamer': 'repeat(1, minmax(300px, 1fr))'
+        'create-gamer': 'repeat(1, minmax(300px, 300px))'
       },
       gridAutoRows: {
         'rooms': 'minmax(300px, 1fr)',
+      },
+      minHeight: {
+        'wrapped-menu': 'calc(100vh - 56px)'
       }
     },
   },
