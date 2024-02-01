@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 const CreateGamer = () => {
+  const [isPrivate, setIsPrivate] = useState(true)
 
   return (
     <div className="bg-blue-700 grid grid-cols-create-gamer grid-rows-create-gamer justify-center">
