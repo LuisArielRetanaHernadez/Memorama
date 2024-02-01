@@ -16,24 +16,40 @@ const CreateGamer = () => {
           />
         </div>
         <div>
-          <label htmlFor="online">
+          <label htmlFor="online"
+          className="p-1 rounded-xl shadow-2xl bg-slate-400 inline-flex cursor-pointer"
+          >
             Online
-            <input id="online" type="checkbox" value={true} onChange={() => setIsOnline(true)}/>
+            <input id="online" type="checkbox" value={true} onChange={() => setIsOnline(true)}
+              className="hidden"
+            />
           </label>
-          <label htmlFor="local">
+          <label htmlFor="local"
+          className="p-1 rounded-xl shadow-2xl bg-slate-400 inline-flex cursor-pointer"
+          >
             Local
-            <input id="local" type="checkbox" value={false} onChange={() => setIsOnline(false)}/>
+            <input id="local" type="checkbox" value={false} onChange={() => setIsOnline(false)}
+              className="hidden"
+            />
           </label>
         </div>
         {
           isOnline && <div>
-            <label htmlFor="private">
+            <label htmlFor="private"
+            className="p-1 rounded-xl shadow-2xl bg-slate-400 inline-flex cursor-pointer"
+            >
               Privadad
-              <input id="private" type="checkbox" value={true} onChange={() => setIsPrivate(true)}/>
+              <input id="private" type="checkbox" value={true} onChange={() => setIsPrivate(true)}
+                className="hidden"
+              />
             </label>
-            <label htmlFor="local">
+            <label htmlFor="local"
+            className="p-1 rounded-xl shadow-2xl bg-slate-400 inline-flex cursor-pointer"
+            >
               Publica
-              <input id="local" type="checkbox" value={false} onChange={() => setIsPrivate(false)}/>
+              <input id="local" type="checkbox" value={false} onChange={() => setIsPrivate(false)}
+                className="hidden"
+              />
             </label>
           </div>
         }
