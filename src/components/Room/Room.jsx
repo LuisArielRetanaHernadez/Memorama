@@ -2,7 +2,7 @@
 const Room = ({id, title}) => {
 
   return (
-    <div className="p-2 rounded-md bg-indigo-800 relative">
+    <div className="p-2 rounded-md bg-blue-300 shadow-xl relative">
       <div className="text-center">
         <h3 className="font-bold text-xl">{title}</h3>
         <h4 className="">Historia</h4>
