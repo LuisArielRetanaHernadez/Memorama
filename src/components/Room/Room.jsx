@@ -2,14 +2,14 @@
 const Room = ({id, title}) => {
 
   return (
-    <div className="p-2 rounded-md bg-blue-300 shadow-xl relative">
+    <div className="p-2 rounded-md bg-blue-400 shadow-xl relative">
       <div className="text-center">
         <h3 className="font-bold text-xl">{title}</h3>
         <h4 className="">Historia</h4>
       </div>
-      <div className=" mt-10">
-        <span className="mr-3">Jugadores</span>
-        <span>4</span>
+      <div className="text-center mt-10">
+        <span className=" text-xl font-semibold mr-3 block">Jugadores</span>
+        <span className=" text-green-900">4</span>
       </div>
 
       <span className=" font-semibold absolute top-3">ID: {id}</span>
