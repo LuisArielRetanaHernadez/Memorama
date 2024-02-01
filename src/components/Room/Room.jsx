@@ -8,8 +8,8 @@ const Room = ({id, title}) => {
         <h4 className="">Historia</h4>
       </div>
       <div className="text-center mt-10">
-        <span className=" text-xl font-semibold mr-3 block">Jugadores</span>
-        <span className=" text-green-900">4</span>
+        <span className="text-xl font-semibold mr-3 block">Jugadores</span>
+        <span className="text-green-900">4</span>
       </div>
 
       <span className=" font-semibold absolute top-3">ID: {id}</span>
