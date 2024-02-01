@@ -6,8 +6,10 @@ const CreateGamer = () => {
         <div className="">
           <input className="w-full font-semibold text-center border-b border-b-slate-950 p-1 outline-none bg-slate-300" placeholder="Titulo"/>
         </div>
-        <div>
-          <input type="number" placeholder="N. Jugadores" max={3}/>
+        <div className="w-full flex justify-center">
+          <input type="number" placeholder="N. Jugadores" max={3}
+            className="w-1/2 border border-b-slate-950 p-1 outline-none bg-transparent"
+          />
         </div>
         <div>
           <label>
