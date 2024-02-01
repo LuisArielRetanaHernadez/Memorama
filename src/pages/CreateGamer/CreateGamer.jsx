@@ -16,6 +16,16 @@ const CreateGamer = () => {
         </div>
         <div>
           <label>
+            Online
+            <input type="checkbox" value={true}/>
+          </label>
+          <label>
+            Local
+            <input type="checkbox" value={false}/>
+          </label>
+        </div>
+        <div>
+          <label>
             Privadad
             <input type="checkbox" value={true}/>
           </label>
@@ -30,7 +40,6 @@ const CreateGamer = () => {
           <spna>V</spna>
         </div>
         }
-        
         <div>
           <button>Crear</button>
         </div>
