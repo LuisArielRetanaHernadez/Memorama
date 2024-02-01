@@ -5,10 +5,10 @@ const CreateGamer = () => {
   const [isOnline, setIsOnline] = useState(true)
 
   return (
-    <div className=" min-h-wrapped-menu bg-blue-700 grid grid-cols-create-gamer grid-rows-create-gamer justify-center content-center">
-      <form className="p-2 rounded-md bg-slate-300">
+    <div className=" min-h-wrapped-menu grid grid-cols-create-gamer grid-rows-create-gamer justify-center content-center">
+      <form className="p-2 rounded-md shadow-2xl bg-neutral-300">
         <div className="">
-          <input className="w-full font-semibold text-center border-b border-b-slate-950 p-1 outline-none bg-slate-300" placeholder="Titulo"/>
+          <input className="w-full font-semibold text-center border-b border-b-slate-950 p-1 outline-none bg-transparent" placeholder="Titulo"/>
         </div>
         <div className="w-full flex justify-center">
           <input type="number" placeholder="N. Jugadores" max={3}
