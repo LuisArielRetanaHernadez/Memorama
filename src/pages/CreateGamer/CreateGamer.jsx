@@ -1,8 +1,8 @@
 const CreateGamer = () => {
 
   return (
-    <div>
-      <form>
+    <div className="bg-blue-700 grid grid-cols-create-gamer grid-rows-create-gamer justify-center">
+      <form className="bg-green-200 rounded-md">
         <div>
           <input placeholder="Titulo"/>
         </div>
