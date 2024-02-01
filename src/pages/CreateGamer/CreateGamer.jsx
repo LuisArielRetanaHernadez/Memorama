@@ -18,22 +18,22 @@ const CreateGamer = () => {
         <div>
           <label>
             Online
-            <input type="checkbox" value={true}/>
+            <input type="checkbox" value={true} onChange={() => setIsOnline(true)}/>
           </label>
           <label>
             Local
-            <input type="checkbox" value={false}/>
+            <input type="checkbox" value={false} onChange={() => setIsOnline(false)}/>
           </label>
         </div>
         {
           isOnline && <div>
             <label>
               Privadad
-              <input type="checkbox" value={true}/>
+              <input type="checkbox" value={true} onChange={() => setIsPrivate(true)}/>
             </label>
             <label>
               Publica
-              <input type="checkbox" value={false}/>
+              <input type="checkbox" value={false} onChange={() => setIsPrivate(false)}/>
             </label>
           </div>
         }
