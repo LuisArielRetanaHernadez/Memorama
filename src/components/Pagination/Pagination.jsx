@@ -51,7 +51,10 @@ const Pagination = ({total, numbersPages = 1, totalSource, updateIndex}) => {
       </div>
       <div className="flex">
         {pages.map((page, i) => (
-          <Link key={i} className="text-white px-3 py-2 border-x border-x-slate-500 bg-blue-950 inline-flex">{page}</Link>
+          <Link
+            key={i}
+            to={`/?page=${page}`}
+            className="text-white px-3 py-2 border-x border-x-slate-500 bg-blue-950 inline-flex">{page}</Link>
         ))}
       </div>
       <div>
