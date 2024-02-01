@@ -15,7 +15,7 @@ const CreateGamer = () => {
             className="w-1/2 border border-b-slate-950 p-1 outline-none bg-transparent"
           />
         </div>
-        <div>
+        <div className="mt-2 flex justify-center gap-6">
           <label htmlFor="online"
           className="p-1 rounded-xl shadow-2xl bg-slate-400 inline-flex cursor-pointer"
           >
@@ -34,7 +34,7 @@ const CreateGamer = () => {
           </label>
         </div>
         {
-          isOnline && <div>
+          isOnline && <div className="mt-2 flex justify-center gap-6">
             <label htmlFor="private"
             className="p-1 rounded-xl shadow-2xl bg-slate-400 inline-flex cursor-pointer"
             >
