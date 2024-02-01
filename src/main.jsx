@@ -8,6 +8,7 @@ import {
 } from "react-router-dom"
 import Menu from './layouts/Menu/Menu.layout'
 import Home from './pages/Home/Home'
+import CreateGamer from './pages/CreateGamer/CreateGamer'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         index: true
+      },
+      {
+        path: "/create/game",
+        element: <CreateGamer />
       }
     ]
   }
