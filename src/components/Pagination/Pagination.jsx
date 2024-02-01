@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { Link, useFetcher, useLocation } from "react-router-dom"
 
-const Pagination = ({total, numbersPages, totalSource, updateIndex}) => {
-  const [pages, setPages] = useState([1,2,3,4])
+const Pagination = ({total, numbersPages = 1, totalSource, updateIndex}) => {
+  const [pages, setPages] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
 
   let location = useLocation()
@@ -29,6 +29,15 @@ const Pagination = ({total, numbersPages, totalSource, updateIndex}) => {
     }
   },[location])
 
+  useEffect(() => {
+    for (let i = 1; i <= totalPages; i++) {
+      setPages(pages => [...pages, i])
+    }
+
+    return () => {
+      setPages([])
+    }
+  },[total, currentPage, location])
 
   // cambiar el index de los links conforme al numero de la paginas
 
@@ -41,7 +50,6 @@ const Pagination = ({total, numbersPages, totalSource, updateIndex}) => {
         </Link>
       </div>
       <div className="flex">
-        <Link to={`/?page=${0 + 1}`} className="text-white px-3 py-2 border-x border-x-slate-500 bg-blue-950 inline-flex">{1}</Link>
         {pages.map((page, i) => (
           <Link key={i} className="text-white px-3 py-2 border-x border-x-slate-500 bg-blue-950 inline-flex">{page}</Link>
         ))}
