@@ -2,7 +2,7 @@ const CreateGamer = () => {
 
   return (
     <div className="bg-blue-700 grid grid-cols-create-gamer grid-rows-create-gamer justify-center">
-      <form className="bg-green-200 rounded-md">
+      <form className="p-2 rounded-md bg-slate-300">
         <div>
           <input placeholder="Titulo"/>
         </div>
