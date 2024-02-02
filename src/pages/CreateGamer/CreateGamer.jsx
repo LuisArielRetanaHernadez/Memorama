@@ -6,7 +6,7 @@ const CreateGamer = () => {
 
   return (
     <div className=" min-h-wrapped-menu grid grid-cols-create-gamer grid-rows-create-gamer justify-center content-center">
-      <form className="p-2 rounded-md shadow-2xl bg-neutral-300">
+      <form className="p-2 rounded-md shadow-2xl bg-neutral-300 flex flex-col justify-between">
         <div className="">
           <input className="w-full font-semibold text-center border-b border-b-slate-950 p-1 outline-none bg-transparent" placeholder="Titulo"/>
         </div>
