@@ -1,3 +1,5 @@
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 const CreateGamer = () => {
@@ -60,7 +62,9 @@ const CreateGamer = () => {
           <input
           type={showPassword ? "text": "password"}
            className="w-full font-semibold text-center border-b border-b-slate-400 p-1 outline-none bg-transparent" placeholder="Contraseña"/>
-          <span onClick={() =>  setShowPassword(prev => !prev)} className="text-blue-800 p-2 rounded-xl cursor-pointer">V</span>
+          <span onClick={() =>  setShowPassword(prev => !prev)} className="text-blue-800 p-2 rounded-xl cursor-pointer">
+          <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
+          </span>
         </div>
         }
         <div className="w-full flex justify-center">
