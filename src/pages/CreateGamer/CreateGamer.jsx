@@ -44,11 +44,11 @@ const CreateGamer = () => {
                 className="hidden"
               />
             </label>
-            <label htmlFor="local"
+            <label htmlFor="public"
             className={`p-1 rounded-xl shadow-2xl ${isPrivate ? "bg-sky-400" : "bg-sky-950"} bg-slate-400 inline-flex cursor-pointer`}
             >
               Publica
-              <input id="local" type="checkbox" value={false} onChange={() => setIsPrivate(false)}
+              <input id="public" type="checkbox" value={false} onChange={() => setIsPrivate(false)}
                 className="hidden"
               />
             </label>
