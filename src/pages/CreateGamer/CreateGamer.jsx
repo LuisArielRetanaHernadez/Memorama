@@ -3,6 +3,7 @@ import { useState } from "react";
 const CreateGamer = () => {
   const [isPrivate, setIsPrivate] = useState(true)
   const [isOnline, setIsOnline] = useState(true)
+  const [showPassword, setShowPassword] = useState(false)
 
   return (
     <div className=" min-h-wrapped-menu grid grid-cols-create-gamer grid-rows-create-gamer justify-center content-center">
