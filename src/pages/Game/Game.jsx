@@ -2,9 +2,9 @@ const Game = () => {
 
   return (
     <section className="bg-blue-400 min-h-wrapped-menu flex">
-    <div className="w-[15%] h-wrapped-menu">
-      <div>
-        <h2>Title</h2>
+    <div className="w-[15%] h-wrapped-menu bg-white">
+      <div className="mb-10 text-center">
+        <h2 className=" text-3xl font-semibold tracking-wide">Title</h2>
         <span>50 segundos</span>
       </div>
 
