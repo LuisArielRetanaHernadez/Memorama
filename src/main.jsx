@@ -9,6 +9,7 @@ import {
 import Menu from './layouts/Menu/Menu.layout'
 import Home from './pages/Home/Home'
 import CreateGamer from './pages/CreateGamer/CreateGamer'
+import Game from './pages/Game/Game'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/create/game",
         element: <CreateGamer />
+      },
+      {
+        path: "/game",
+        element: <Game />
       }
     ]
   }
