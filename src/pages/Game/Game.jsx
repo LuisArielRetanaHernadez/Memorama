@@ -4,8 +4,8 @@ const Game = () => {
     <section className="bg-blue-400 min-h-wrapped-menu flex">
     <div className="w-[15%] h-wrapped-menu px-2 py-3 bg-white">
       <div className="mb-10 text-center">
-        <h2 className=" text-3xl font-semibold tracking-wide">Title</h2>
-        <span>50 segundos</span>
+        <h2 className=" text-3xl font-semibold tracking-wide mb-3">Title</h2>
+        <span className=" text-lg font-bold">50 segundos</span>
       </div>
 
       <div>
