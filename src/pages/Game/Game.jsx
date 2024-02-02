@@ -1,3 +1,6 @@
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Game = () => {
 
   return (
@@ -9,7 +12,12 @@ const Game = () => {
       </div>
 
       <div>
-        <h3>Jugadores</h3>
+        <div className="flex justify-center items-center">
+          <div className="text-blue-500 p-2 rounded-xl bg-gray-200 inline-flex justify-center items-center">
+            <FontAwesomeIcon icon={faUsers} className="mr-2" />
+            <h3 className="font-semibold">Jugadores</h3>
+          </div>
+        </div>
         <ul>
           <li>Jugador 1</li>
           <li>Jugador 2</li>
