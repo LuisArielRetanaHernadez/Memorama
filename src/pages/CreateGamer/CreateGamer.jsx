@@ -60,8 +60,10 @@ const CreateGamer = () => {
           <span className=" bg-blue-200 text-blue-800 p-2 rounded-xl">V</span>
         </div>
         }
-        <div>
-          <button>Crear</button>
+        <div className="w-full flex justify-center">
+          <button
+          className="m-auto px-3 py-2 font-semibold text-gray-50 rounded-xl bg-sky-950"
+          >Crear</button>
         </div>
       </form>
     </div>
