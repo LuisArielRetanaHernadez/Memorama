@@ -2,7 +2,7 @@ const Game = () => {
 
   return (
     <section className="bg-blue-400 min-h-wrapped-menu flex">
-    <div className="w-[15%] h-wrapped-menu bg-white">
+    <div className="w-[15%] h-wrapped-menu px-2 py-3 bg-white">
       <div className="mb-10 text-center">
         <h2 className=" text-3xl font-semibold tracking-wide">Title</h2>
         <span>50 segundos</span>
