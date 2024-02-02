@@ -20,7 +20,7 @@ const CreateGamer = () => {
         </div>
         <div className="mt-2 flex justify-center gap-6">
           <label htmlFor="online"
-          className="p-1 rounded-xl shadow-2xl bg-slate-400 inline-flex cursor-pointer"
+          className={`p-1 rounded-xl shadow-2xl ${isOnline ? "bg-sky-950" : "bg-sky-400"} bg-slate-400 inline-flex cursor-pointer`}
           >
             Online
             <input id="online" type="checkbox" value={true} onChange={() => setIsOnline(true)}
@@ -28,7 +28,7 @@ const CreateGamer = () => {
             />
           </label>
           <label htmlFor="local"
-          className="p-1 rounded-xl shadow-2xl bg-slate-400 inline-flex cursor-pointer"
+           className={`p-1 rounded-xl shadow-2xl ${isOnline ? "bg-sky-400" : "bg-sky-950"} bg-slate-400 inline-flex cursor-pointer`}
           >
             Local
             <input id="local" type="checkbox" value={false} onChange={() => setIsOnline(false)}
