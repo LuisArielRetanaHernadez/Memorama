@@ -57,8 +57,10 @@ const CreateGamer = () => {
 
         {
           isPrivate && <div className="flex gap-3">
-          <input className="w-full font-semibold text-center border-b border-b-slate-400 p-1 outline-none bg-transparent" placeholder="Contraseña"/>
-          <span className=" bg-blue-200 text-blue-800 p-2 rounded-xl">V</span>
+          <input
+          type={showPassword ? "text": "password"}
+           className="w-full font-semibold text-center border-b border-b-slate-400 p-1 outline-none bg-transparent" placeholder="Contraseña"/>
+          <span onClick={() =>  setShowPassword(prev => !prev)} className="bg-blue-200 text-blue-800 p-2 rounded-xl">V</span>
         </div>
         }
         <div className="w-full flex justify-center">
