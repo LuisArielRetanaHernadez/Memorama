@@ -8,11 +8,11 @@ const CreateGamer = () => {
     <div className=" min-h-wrapped-menu grid grid-cols-create-gamer grid-rows-create-gamer justify-center content-center">
       <form className="p-2 rounded-md shadow-2xl bg-neutral-300 flex flex-col justify-between">
         <div className="">
-          <input className="w-full font-semibold text-center border-b border-b-slate-950 p-1 outline-none bg-transparent" placeholder="Titulo"/>
+          <input className="w-full font-semibold text-center border-b border-b-slate-400 p-1 outline-none bg-transparent" placeholder="Titulo"/>
         </div>
         <div className="w-full flex justify-center">
           <input type="number" placeholder="N. Jugadores" max={3}
-            className="w-1/2 border border-b-slate-950 p-1 outline-none bg-transparent"
+            className="w-1/2 border border-b-slate-400 p-1 outline-none bg-transparent"
           />
         </div>
         <div className="mt-2 flex justify-center gap-6">
@@ -56,7 +56,7 @@ const CreateGamer = () => {
 
         {
           isPrivate && <div className="flex gap-3">
-          <input className="w-full font-semibold text-center border-b border-b-slate-950 p-1 outline-none bg-transparent" placeholder="Contraseña"/>
+          <input className="w-full font-semibold text-center border-b border-b-slate-400 p-1 outline-none bg-transparent" placeholder="Contraseña"/>
           <span className=" bg-blue-200 text-blue-800 p-2 rounded-xl">V</span>
         </div>
         }
