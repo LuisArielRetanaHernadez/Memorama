@@ -17,6 +17,10 @@ export default {
       gridAutoRows: {
         'rooms': 'minmax(300px, 1fr)',
       },
+      height: {
+        'wrapped-menu': 'calc(100vh - 56px)'
+
+      },
       minHeight: {
         'wrapped-menu': 'calc(100vh - 56px)'
       }
