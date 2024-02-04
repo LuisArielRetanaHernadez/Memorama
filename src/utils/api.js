@@ -54,50 +54,62 @@ export const rooms = [
 export const cards = [
   {
     id: Math.floor(Math.random() * 1000),
-    content: 'Uno'
+    content: 'Uno',
+    pair: 1
   },
   {
     id: Math.floor(Math.random() * 1000),
-    content: 'Uno'
+    content: 'Uno',
+    pair: 1
   },
   {
     id: Math.floor(Math.random() * 1000),
-    content: 'Dos'
+    content: 'Dos',
+    pair: 2
   },
   {
     id: Math.floor(Math.random() * 1000),
-    content: 'Dos'
+    content: 'Dos',
+    pair: 2
   },
   {
     id: Math.floor(Math.random() * 1000),
-    content: 'Tres'
+    content: 'Tres',
+    pair: 3
   },
   {
     id: Math.floor(Math.random() * 1000),
-    content: 'Tres'
+    content: 'Tres',
+    pair: 3
   },
   {
     id: Math.floor(Math.random() * 1000),
-    content: 'Cuatro'
+    content: 'Cuatro',
+    pair: 4
   },
   {
     id: Math.floor(Math.random() * 1000),
-    content: 'Cuatro'
+    content: 'Cuatro',
+    pair: 4
   },
   {
     id: Math.floor(Math.random() * 1000),
-    content: 'Cinco'
+    content: 'Cinco',
+    pair: 5
   },
   {
     id: Math.floor(Math.random() * 1000),
-    content: 'Cinco'
+    content: 'Cinco',
+    pair: 5
   },
   {
     id: Math.floor(Math.random() * 1000),
-    content: 'Seis'
+    content: 'Seis',
+    pair: 6
   },
   {
     id: Math.floor(Math.random() * 1000),
-    content: 'Seis'
+    content: 'Seis',
+    pair: 6
   },
 ]
