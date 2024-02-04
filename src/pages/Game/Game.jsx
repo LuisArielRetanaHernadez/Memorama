@@ -18,10 +18,10 @@ const Game = () => {
             <h3 className="font-semibold">Jugadores</h3>
           </div>
         </div>
-        <ul className="flex flex-col gap-2">
-          <li>Jugador 1</li>
-          <li>Jugador 2</li>
-          <li>Jugador 3</li>
+        <ul className="font-semibold flex flex-col justify-center gap-2">
+          <li className="w-max text-blue-500 p-2 rounded-xl bg-gray-200">Jugador 1</li>
+          <li className="w-max text-red-500 p-2 rounded-xl bg-gray-200">Jugador 2</li>
+          <li className="w-max text-green-500 p-2 rounded-xl bg-gray-200">Jugador 3</li>
         </ul>
       </div>
 
