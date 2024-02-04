@@ -6,8 +6,11 @@ import { cards } from "../../utils/api";
 
 // components
 import Card from "../../components/Card/Card";
+import { useState } from 'react';
 
 const Game = () => {
+  const [cardsMemory, setCardsMemory] = useState(cards);
+  const [selectedCards, setSelectedCards] = useState([]);
 
   return (
     <section className="bg-blue-400 min-h-wrapped-menu flex">
