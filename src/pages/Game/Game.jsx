@@ -26,7 +26,7 @@ const Game = () => {
       </div>
 
     </div>
-    <div className="bg-white flex-grow">
+    <div className="bg-red-200 flex-grow grid">
         {/*targets of gamer */}
       </div>
     </section>
