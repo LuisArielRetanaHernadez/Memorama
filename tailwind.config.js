@@ -8,7 +8,8 @@ export default {
     extend: {
       gridTemplateColumns: {
         'rooms': 'repeat(auto-fit, minmax(250px, 1fr))',
-        'create-gamer': 'repeat(1, minmax(250px, 300px))'
+        'create-gamer': 'repeat(1, minmax(250px, 300px))',
+        'cards': 'repeat(auto-fit, minmax(250px, 350px))',
       },
       gridTemplateRows: {
         'rooms': 'repeat(auto-fit, minmax(300px, 1fr))',
