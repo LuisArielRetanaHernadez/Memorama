@@ -50,3 +50,54 @@ export const rooms = [
     isPrivate: false,
   },
 ]
+
+export const cards = [
+  {
+    id: Math.floor(Math.random() * 1000),
+    content: 'Uno'
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    content: 'Uno'
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    content: 'Dos'
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    content: 'Dos'
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    content: 'Tres'
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    content: 'Tres'
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    content: 'Cuatro'
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    content: 'Cuatro'
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    content: 'Cinco'
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    content: 'Cinco'
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    content: 'Seis'
+  },
+  {
+    id: Math.floor(Math.random() * 1000),
+    content: 'Seis'
+  },
+]
