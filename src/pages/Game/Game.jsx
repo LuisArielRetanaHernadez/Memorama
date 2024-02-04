@@ -1,6 +1,12 @@
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+// fake-api
+import { cards } from "../../utils/api";
+
+// components
+import Card from "../../components/Card/Card";
+
 const Game = () => {
 
   return (
