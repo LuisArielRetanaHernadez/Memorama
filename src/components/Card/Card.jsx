@@ -8,6 +8,11 @@ const Card = ({content}) => {
           {content}
         </p>
       </div>
+      <div>
+        <div>
+          ¿Lo recuerdas?...
+        </div>
+      </div>
     </div>
   )
 }
