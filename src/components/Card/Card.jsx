@@ -2,7 +2,7 @@
 const Card = ({content}) => {
 
   return (
-    <div>
+    <div className="bg-blue-400">
       <div>
         <p>
           {content}
