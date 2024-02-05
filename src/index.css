@@ -10,6 +10,10 @@
   transform: rotateY(180deg);
 }
 
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+
 .hover-rotate-x-180 {
   transform: rotateY(0deg);
   transition: all .2s;
@@ -18,3 +22,14 @@
 .hover-rotate-x-180:hover {
   transform: rotateY(180deg);
 }
+
+.back, .front {
+  transition: all .2s;
+}
+.card-flip:hover .back {
+  transform: rotateY(360deg);
+} 
+
+.card-flip:hover .front {
+  transform: rotateY(180deg);
+} 
