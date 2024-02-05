@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
+import { useState } from 'react'
+
 const Card = ({content}) => {
+  const [select, setSelect] = useState(false);
 
   return (
     <div className="rounded-md relative card-flip">
