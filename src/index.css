@@ -26,10 +26,10 @@
 .back, .front {
   transition: all .2s;
 }
-.card-flip:hover .back {
+.card-flip .back {
   transform: rotateY(360deg);
 } 
 
-.card-flip:hover .front {
+.card-flip .front {
   transform: rotateY(180deg);
 } 
