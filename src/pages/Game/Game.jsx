@@ -11,6 +11,7 @@ import { useState } from 'react';
 const Game = () => {
   const [cardsMemory, setCardsMemory] = useState(cards);
   const [selectedCards, setSelectedCards] = useState([]);
+  const [matchedCards, setMatchedCards] = useState([])
 
   return (
     <section className="h-wrapped-menu flex">
