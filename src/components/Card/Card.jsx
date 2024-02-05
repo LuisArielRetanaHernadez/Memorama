@@ -10,7 +10,9 @@ const Card = ({content}) => {
       </div>
       <div className="w-full h-full rounded-md shadow-2xl shadow-black bg-white  flex justify-center items-center absolute backface-hidden rotate-y-0 ease-in front">
         <div>
-          ¿Lo recuerdas?...
+          <span className="font-semibold">
+            ¿Lo recuerdas?...
+          </span>
         </div>
       </div>
     </div>
