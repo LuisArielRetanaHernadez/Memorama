@@ -13,7 +13,7 @@ const Game = () => {
   const [selectedCards, setSelectedCards] = useState([]);
 
   return (
-    <section className="bg-blue-400 h-wrapped-menu flex">
+    <section className="h-wrapped-menu flex">
     <div className="w-[15%] h-wrapped-menu px-2 py-3 bg-white">
       <div className="mb-10 text-center">
         <h2 className=" text-3xl font-semibold tracking-wide mb-3">Title</h2>
@@ -35,7 +35,7 @@ const Game = () => {
       </div>
 
     </div>
-    <div className="bg-red-200 flex-grow grid grid-cols-cards auto-rows-cards justify-center content-center gap-2">
+    <div className="flex-grow grid grid-cols-cards auto-rows-cards justify-center content-center gap-2">
         {/*targets of gamer */}
         {cardsMemory.map(card => (
           <Card key={card.id} content={card.content} selectedCards={selectedCards} setSelectedCards={setSelectedCards} />  // selectedCards={selectedCards} setSelectedCards={setSelectedCards}
