@@ -6,12 +6,24 @@ import { cards } from "../../utils/api";
 
 // components
 import Card from "../../components/Card/Card";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Game = () => {
   const [cardsMemory, setCardsMemory] = useState(cards);
-  const [selectedCards, setSelectedCards] = useState([]);
+  const [selectedCards, setSelectedCards] = useState([1]);
   const [matchedCards, setMatchedCards] = useState([])
+
+  useEffect(() => {
+    if (selectedCards.length === 2) {
+      const isMatch = selectedCards.every(pair => selectedCards[0] === pair)
+      if (isMatch) {
+        setMatchedCards([...matchedCards, selectedCards[0]])
+      }
+    }
+    return () => {
+      setSelectedCards([])
+    } 
+  }, [selectedCards])
 
   return (
     <section className="h-wrapped-menu flex">
