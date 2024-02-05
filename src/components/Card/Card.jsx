@@ -2,9 +2,9 @@
 const Card = ({content}) => {
 
   return (
-    <div className="bg-blue-400">
+    <div className="rounded-md shadow-2xl shadow-black bg-white flex items-center justify-center">
       <div>
-        <p>
+        <p className="font-semibold text-lg text-blue-900">
           {content}
         </p>
       </div>
