@@ -4,7 +4,7 @@ const Menu = () => {
 
   return (
     <>
-      <header className="w-full h-14 bg-red-700">
+      <header className="w-full h-14 bg-blue-700">
         <div className="h-full p-5 flex justify-between items-center">
           <Link className="font-bold">
             <h1 className="">Matcha</h1>
