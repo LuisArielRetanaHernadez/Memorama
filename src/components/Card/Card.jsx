@@ -39,7 +39,7 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
   return (
     <div
     onClick={weTurned}
-     className={`rounded-md relative ${turned ? 'card-flip' : ''}`}
+     className={`rounded-md cursor-pointer relative ${turned ? 'card-flip' : ''}`}
      >
       <div className="w-full h-full rounded-md shadow-2xl shadow-black bg-white  flex justify-center items-center absolute backface-hidden rotate-x-180 ease-in back">
         <p className="font-semibold text-lg text-blue-900">
