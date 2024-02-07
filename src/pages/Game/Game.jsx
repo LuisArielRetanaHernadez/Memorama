@@ -10,20 +10,23 @@ import { useEffect, useState } from 'react';
 
 const Game = () => {
   const [cardsMemory, setCardsMemory] = useState(cards);
-  const [selectedCards, setSelectedCards] = useState([1]);
+  const [selectedCards, setSelectedCards] = useState([]);
   const [matchedCards, setMatchedCards] = useState([])
 
   useEffect(() => {
     if (selectedCards.length === 2) {
       const isMatch = selectedCards.every(pair => selectedCards[0] === pair)
       if (isMatch) {
-        setMatchedCards([...matchedCards, selectedCards[0]])
+        const redundancyMatch = matchedCards.find(pair => pair === selectedCards[0])
+        if (!redundancyMatch) {
+          setMatchedCards([...matchedCards, selectedCards[0]])
+        }
       }
-    }
-    return () => {
       setSelectedCards([])
-    } 
+    }
+
   }, [selectedCards])
+
 
   return (
     <section className="h-wrapped-menu flex">
@@ -51,7 +54,7 @@ const Game = () => {
     <div className="flex-grow grid grid-cols-cards auto-rows-cards justify-center content-center gap-2">
         {/*targets of gamer */}
         {cardsMemory.map(card => (
-          <Card key={card.id} id={card.id} refPair={card.pair} content={card.content} selectedCards={selectedCards} setSelectedCards={setSelectedCards} />  // selectedCards={selectedCards} setSelectedCards={setSelectedCards}
+          <Card key={card.id} id={card.id} refPair={card.pair} content={card.content} selectedCards={selectedCards} setSelectedCards={setSelectedCards} matchedCards={matchedCards} />  // selectedCards={selectedCards} setSelectedCards={setSelectedCards}
         ))}
       </div>
     </section>
