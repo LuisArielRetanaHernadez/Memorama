@@ -6,8 +6,8 @@ const Menu = () => {
     <>
       <header className="w-full h-14 bg-blue-700">
         <div className="h-full p-5 flex justify-between items-center">
-          <Link className="font-bold">
-            <h1 className="">Matcha</h1>
+          <Link className="text-blue-600 font-bold px-2 py-1 rounded-md bg-slate-200">
+            <h1 className="tracking-wide">Matcha</h1>
           </Link>
           <nav>
             <ul className="flex gap-4">
