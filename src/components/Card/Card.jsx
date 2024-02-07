@@ -34,7 +34,7 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
      >
       <div className="w-full h-full rounded-md shadow-2xl shadow-black bg-white  flex justify-center items-center absolute backface-hidden rotate-x-180 ease-in back">
         <p className="font-semibold text-lg text-blue-900">
-          {content}
+          {turned ? content : ''}
         </p>
       </div>
       <div className="w-full h-full rounded-md shadow-2xl shadow-black bg-white  flex justify-center items-center absolute backface-hidden rotate-y-0 ease-in front">
