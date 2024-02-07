@@ -48,8 +48,8 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
       </div>
       <div className="w-full h-full rounded-md shadow-2xl shadow-black bg-white  flex justify-center items-center absolute backface-hidden rotate-y-0 ease-in front">
         <div>
-          <span className="font-semibold">
-            ¿Lo recuerdas?...
+          <span className="text-3xl text-sky-700 font-semibold">
+            ¿?
           </span>
         </div>
       </div>
