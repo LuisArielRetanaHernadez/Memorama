@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react'
 
-const Card = ({content, refPair, selectedCards, setSelectedCards}) => {
+const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards}) => {
   const [turned, setTurned] = useState(false);
   const handleTurned = () => {
     setTurned(prevent => !prevent);
@@ -10,7 +10,7 @@ const Card = ({content, refPair, selectedCards, setSelectedCards}) => {
   useEffect(() => {
     if (turned) {
       setSelectedCards([...selectedCards, refPair])
-    } 
+    }
   }, [turned])
 
   return (
