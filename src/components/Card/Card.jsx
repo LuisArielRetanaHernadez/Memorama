@@ -1,11 +1,17 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const Card = ({content, refPair, setSelect}) => {
+const Card = ({content, refPair, selectedCards, setSelectedCards}) => {
   const [turned, setTurned] = useState(false);
   const handleTurned = () => {
     setTurned(prevent => !prevent);
   }
+
+  useEffect(() => {
+    if (turned) {
+      setSelectedCards([...selectedCards, refPair])
+    } 
+  }, [turned])
 
   return (
     <div
