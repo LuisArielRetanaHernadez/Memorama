@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 
 const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards}) => {
   const [turned, setTurned] = useState(false);
+  const [blockCard, setBlockCard] = useState(true);
+
   const handleTurned = () => {
     setTurned(prevent => !prevent);
   }
@@ -13,9 +15,15 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
     }
   }, [turned])
 
+  const weTurned = () => {
+    if (blockCard) {
+      handleTurned()
+    }
+  }
+
   return (
     <div
-    onClick={handleTurned}
+    onClick={weTurned}
      className={`rounded-md relative ${turned ? 'card-flip' : ''}`}
      >
       <div className="w-full h-full rounded-md shadow-2xl shadow-black bg-white  flex justify-center items-center absolute backface-hidden rotate-x-180 ease-in back">
