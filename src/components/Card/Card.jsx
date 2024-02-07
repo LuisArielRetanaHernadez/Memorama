@@ -19,7 +19,16 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
     if (matchedCards.some(pair => pair === refPair)) {
       setBlockCard(false)
     }
+    if (selectedCards.length === 2) {
+      setBlockCard(false)
+    }
   }, [selectedCards, matchedCards, turned])
+
+  useEffect(() => {
+    if (selectedCards.some(pair => pair === refPair)) {
+      setBlockCard(false)
+    }
+  }, [turned])
 
   const weTurned = () => {
     if (blockCard) {
