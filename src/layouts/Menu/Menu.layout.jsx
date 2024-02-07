@@ -13,12 +13,12 @@ const Menu = () => {
             <ul className="flex gap-4">
               <li>
                 <Link href="#" className="inline-block">
-                  <span className="inline-block p-1">Crear</span>
+                  <span className="text-white text-lg font-semibold inline-block p-1">Crear</span>
                 </Link>
               </li>
               <li>
                 <Link href="#" className="inline-block">
-                  <span className="inline-block p-1">Home</span>
+                  <span className="text-white text-lg font-semibold inline-block p-1">Home</span>
                 </Link>
               </li>
             </ul>
