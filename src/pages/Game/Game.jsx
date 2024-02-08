@@ -11,8 +11,8 @@ import { useEffect, useState } from 'react';
 const Game = () => {
   const [cardsMemory, setCardsMemory] = useState(cards);
   const [selectedCards, setSelectedCards] = useState([]);
-  const [matchedCards, setMatchedCards] = useState([])
-
+  const [matchedCards, setMatchedCards] = useState([]);
+  
   useEffect(() => {
     if (selectedCards.length === 2) {
       const isMatch = selectedCards.every(pair => selectedCards[0] === pair)
