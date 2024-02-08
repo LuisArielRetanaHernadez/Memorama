@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards}) => {
   const [turned, setTurned] = useState(false);
-  const [blockCard, setBlockCard] = useState(true);
+  const [blockCard, setBlockCard] = useState(false);
 
   const handleTurned = () => {
     setTurned(prevent => !prevent);
@@ -17,30 +17,27 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
   }, [turned])
 
   useEffect(() => {
-    if (selectedCards.length === 2) {
-      setBlockCard(false)
-    }
-    if (selectedCards.length === 0) {
-      setBlockCard(true)
-    }
-  }, [selectedCards, matchedCards, turned])
+    const isLimietReached = selectedCards.length === 2
+    const isTurned = flipSomeCard(isLimietReached, turned)
+    setBlockCard(isTurned)
+  }, [selectedCards, turned])
 
   const flipSomeCard = (turn, isTurned) => {
-    if (turn && isTurned) {
-      return false
-    } else {
+    if (turn && !isTurned) {
       return true
+    } else {
+      return false
     }
   }
 
   useEffect(() => {
     if (selectedCards.some(pair => pair === refPair)) {
-      setBlockCard(false)
+      setBlockCard(true)
     }
   }, [turned])
 
   const weTurned = () => {
-    if (blockCard) {
+    if (!blockCard) {
       handleTurned()
     }
   }
@@ -48,7 +45,7 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
   return (
     <div
     onClick={weTurned}
-     className={`rounded-md relative ${turned ? 'card-flip' : ''} ${blockCard ? 'cursor-pointer' : 'cursort-not-allwed'}`}
+     className={`rounded-md relative ${turned ? 'card-flip' : ''} ${blockCard ? 'cursort-not-allwed' : 'cursor-pointer'}`}
      >
       <div className="w-full h-full rounded-md shadow-md shadow-blue-500 bg-white  flex justify-center items-center absolute backface-hidden rotate-x-180 ease-in back">
         <p className="font-semibold text-lg text-sky-700">
