@@ -20,8 +20,12 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
     if (matchedCards.some(pair => pair === refPair)) {
       setBlockCard(false)
     }
+    console.log('longitud selectCard: ', selectedCards.length)
     if (selectedCards.length === 2) {
       setBlockCard(false)
+    }
+    if (selectedCards.length === 0) {
+      setBlockCard(true)
     }
   }, [selectedCards, matchedCards, turned])
 
