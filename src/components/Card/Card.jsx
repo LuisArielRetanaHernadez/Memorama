@@ -25,6 +25,14 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
     }
   }, [selectedCards, matchedCards, turned])
 
+  const flipSomeCard = (turn, isTurned) => {
+    if (turn && isTurned) {
+      return false
+    } else {
+      return true
+    }
+  }
+
   useEffect(() => {
     if (selectedCards.some(pair => pair === refPair)) {
       setBlockCard(false)
