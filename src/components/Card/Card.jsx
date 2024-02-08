@@ -17,9 +17,6 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
   }, [turned])
 
   useEffect(() => {
-    if (matchedCards.some(pair => pair === refPair)) {
-      setBlockCard(false)
-    }
     if (selectedCards.length === 2) {
       setBlockCard(false)
     }
