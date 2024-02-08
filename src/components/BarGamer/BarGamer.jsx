@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 const BarGamer = () => {
 
   return (
-    <>
+    <div className="w-full h-full">
        <div className="mb-10 text-center">
         <h2 className=" text-3xl font-semibold tracking-wide mb-3">Title</h2>
         <span className=" text-lg font-bold">50 segundos</span>
@@ -23,7 +23,7 @@ const BarGamer = () => {
           <li className="w-max text-green-500 p-2 rounded-xl bg-gray-200">Jugador 3</li>
         </ul>
       </div>
-    </>
+    </div>
   )
 }
 
