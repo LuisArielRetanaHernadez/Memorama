@@ -23,7 +23,7 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
   }, [selectedCards, turned])
 
   const flipSomeCard = (turn, isTurned) => {
-    if (turn && !isTurned) {
+    if (!turn && isTurned) {
       return true
     } else {
       return false
