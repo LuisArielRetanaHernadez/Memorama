@@ -35,7 +35,6 @@ const Game = () => {
       <BarGamer />
     </div>
     <div className="flex-grow grid grid-cols-cards auto-rows-cards justify-center content-center gap-2">
-        {/*targets of gamer */}
         {cardsMemory.map(card => (
           <Card key={card.id} id={card.id} refPair={card.pair} content={card.content} selectedCards={selectedCards} setSelectedCards={setSelectedCards} matchedCards={matchedCards} />  // selectedCards={selectedCards} setSelectedCards={setSelectedCards}
         ))}
