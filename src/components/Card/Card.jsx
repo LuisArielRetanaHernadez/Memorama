@@ -22,6 +22,14 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
     setBlockCard(isTurned)
   }, [selectedCards, turned])
 
+  useEffect(() => {
+    if (selectedCards.length === 2) {
+      setTimeout(() => {
+        setTurned(false)
+      }, 1000)
+    }
+  },[selectedCards])
+
   const flipSomeCard = (turn, isTurned) => {
     if (!turn && isTurned) {
       return true
