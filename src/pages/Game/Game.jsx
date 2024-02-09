@@ -1,6 +1,3 @@
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 // fake-api
 import { cards } from "../../utils/api";
 
@@ -18,7 +15,7 @@ const Game = () => {
     if (selectedCards.length === 2) {
       const isMatch = selectedCards.every(pair => selectedCards[0] === pair)
       if (isMatch) {
-        const redundancyMatch = matchedCards.find(pair => pair === selectedCards[0])
+        const redundancyMatch = matchedCards.includes(selectedCards[0])
         if (!redundancyMatch) {
           setMatchedCards([...matchedCards, selectedCards[0]])
         }
