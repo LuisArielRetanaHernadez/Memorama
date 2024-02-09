@@ -73,10 +73,10 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
   return (
     <div
     onClick={weTurned}
-     className={`rounded-md relative ${turned ? 'card-flip' : ''} ${blockCard ? 'cursort-not-allwed' : 'cursor-pointer'}`}
+     className={`rounded-md ${isMatched ? 'text-white bg-sky-500' : ''} relative ${turned ? 'card-flip' : ''} ${blockCard ? 'cursort-not-allwed' : 'cursor-pointer'}`}
      >
-      <div className="w-full h-full rounded-md shadow-md shadow-blue-500 bg-white  flex justify-center items-center absolute backface-hidden rotate-x-180 ease-in back">
-        <p className="font-semibold text-lg text-sky-700">
+      <div className={`w-full h-full rounded-md shadow-md shadow-blue-500 ${isMatched ? 'text-white bg-sky-500' : 'bg-white'} flex justify-center items-center absolute backface-hidden rotate-x-180 ease-in back`}>
+        <p className={`font-semibold text-lg ${isMatched ? 'text-white' : 'text-sky-700'}`}>
           {turned ? content : ''}
         </p>
       </div>
