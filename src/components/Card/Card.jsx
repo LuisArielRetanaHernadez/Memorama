@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards}) => {
   const [turned, setTurned] = useState(false);
   const [blockCard, setBlockCard] = useState(false);
+  const [isMatched, setIsMatched] = useState(false);
 
   const handleTurned = () => {
     setTurned(prevent => !prevent);
@@ -14,21 +15,46 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
     if (turned) {
       setSelectedCards([...selectedCards, refPair])
     }
+
   }, [turned])
 
   useEffect(() => {
+
     const isLimietReached = selectedCards.length === 2
     const isTurned = flipSomeCard(isLimietReached, turned)
+
     setBlockCard(isTurned)
   }, [selectedCards, turned])
 
   useEffect(() => {
-    if (selectedCards.length === 2) {
+    if (selectedCards.length === 2 && !isMatched) {
       setTimeout(() => {
         setTurned(false)
-      }, 1000)
+      }, 400)
     }
-  },[selectedCards])
+  }, [selectedCards, isMatched])
+
+  useEffect(() => {
+    if (isMatched) {
+      setTurned(true)
+    }
+  }, [isMatched])
+
+  useEffect(() => {
+    handleMatched()
+  }, [matchedCards])
+
+  useEffect(() => {
+    if (selectedCards.some(pair => pair === refPair)) {
+      setBlockCard(true)
+    }
+  }, [turned])
+
+  const handleMatched = () => {
+    if (matchedCards.includes(refPair)) {
+      setIsMatched(true)
+    }
+  }
 
   const flipSomeCard = (turn, isTurned) => {
     if (!turn && isTurned) {
@@ -37,12 +63,6 @@ const Card = ({content, refPair, selectedCards, setSelectedCards, matchedCards})
       return false
     }
   }
-
-  useEffect(() => {
-    if (selectedCards.some(pair => pair === refPair)) {
-      setBlockCard(true)
-    }
-  }, [turned])
 
   const weTurned = () => {
     if (!blockCard) {
