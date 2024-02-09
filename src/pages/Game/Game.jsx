@@ -3,8 +3,11 @@ import { cards } from "../../utils/api";
 
 // components
 import Card from "../../components/Card/Card";
-import { useEffect, useState } from 'react';
 import BarGamer from "../../components/BarGamer/BarGamer";
+
+// hooks react
+import { useEffect, useState } from 'react';
+
 
 const Game = () => {
   const [cardsMemory, setCardsMemory] = useState(cards);
