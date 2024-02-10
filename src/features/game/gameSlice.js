@@ -10,10 +10,22 @@ const initialState = {
 }
 
 const fetchCreateGame = createAsyncThunk(
-  'game/fetchGetCards',
+  'game/fetchCreateCards',
   async (config, thunkAPI) => {
     try {
       const response = await createGame(config);
+      return response.data
+    } catch (error) {
+      throw thunkAPI.rejectWithValue(error)
+    }
+  }
+)
+
+const fetchGetByIdCards = createAsyncThunk(
+  'game/fetchGetByIdCards',
+  async (id, thunkAPI) => {
+    try {
+      const response = await getCards(id);
       return response.data
     } catch (error) {
       throw thunkAPI.rejectWithValue(error)
