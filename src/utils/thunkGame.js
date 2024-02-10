@@ -5,3 +5,9 @@ export const createGame = (config) => {
     .then(res => res.data)
     .catch(err => err)
 }
+
+export const getGameById = (id) => {
+  return instanceAxios.get(`/game/${id}`)
+    .then(res => res.data)
+    .catch(err => err)
+}
