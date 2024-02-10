@@ -1,4 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createGame } from "../../utils/thunkGame";
+import { rejects } from "assert";
 
 const initialState = {
   players: [],
@@ -9,8 +11,13 @@ const initialState = {
 
 const fetchCreateGame = createAsyncThunk(
   'game/fetchGetCards',
-  async (config) => {
-
+  async (config, thunkAPI) => {
+    try {
+      const response = await createGame(config);
+      return response.data
+    } catch (error) {
+      throw thunkAPI.rejectWithValue(error)
+    }
   }
 )
 
